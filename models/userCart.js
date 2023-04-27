@@ -40,6 +40,10 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    tourDate: {
+        type: String,
+        required: true,
+    },
     tourDuration: {
         type: String,
         required: true,
