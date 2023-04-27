@@ -47,6 +47,13 @@ const userSchema = mongoose.Schema({
     tourDuration: {
         type: String,
         required: true,
+    },
+    paymentStatus: {
+        type: String,
+        required: true,
+        enum: ['unpaid', 'booked'],
+        default: 'unpaid',
+        message: 'payment status can not be {VALUE}'
     }
 }, {
     timestamps: true,
