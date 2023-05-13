@@ -21,6 +21,18 @@ const bannerSchema = mongoose.Schema({
     tourType: {
         type: String,
         required: true,
+    },
+    tourPrice: {
+        type: String,
+        required: true,
+    },
+    tourDate: {
+        type: String,
+        required: true,
+    },
+    tourLastDate: {
+        type: String,
+        required: true,
     }
 }, {
     timestamps: true,
