@@ -13,7 +13,6 @@ const eventSchema = mongoose.Schema({
         required: [true, 'please provide global event name'],
         maxLength: 40,
         unique: [true, 'please provide unique name'],
-        lowercase: true
     },
     description: { type: String, required: true },
     img: {

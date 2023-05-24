@@ -10,7 +10,6 @@ const eventSchema = mongoose.Schema({
         required: [true, 'please provide home event name'],
         maxLength: 40,
         unique: [true, 'please type in lowercase'],
-        lowercase: true
     },
     description: { type: String, required: true },
     img: {
