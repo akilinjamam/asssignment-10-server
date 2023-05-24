@@ -22,6 +22,13 @@ const userControllSchema = mongoose.Schema({
     },
     userPhoto: {
         type: String,
+    },
+    newsLetter: {
+        type: String,
+        required: true,
+        enum: ['no', 'yes'],
+        dafault: 'no',
+        message: 'user newsLetter can not be {VALUE}'
     }
 }, {
     timestamps: true,
