@@ -6,3 +6,7 @@ module.exports.createReviewsService = async (data) => {
     return review;
 }
 
+module.exports.getReviewService = async () => {
+    const review = await Review.find({});
+    return review;
+}

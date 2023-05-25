@@ -1,4 +1,4 @@
-const { createReviewsService } = require("../services/review.service")
+const { createReviewsService, getReviewService } = require("../services/review.service")
 
 module.exports.createReviewsController = async (req, res) => {
 
@@ -8,6 +8,25 @@ module.exports.createReviewsController = async (req, res) => {
         res.status(200).json({
             status: 'success',
             message: 'review is created successfuylly',
+            result: review
+        })
+    } catch (error) {
+        res.status(400).json({
+            status: 'failed',
+            message: error.message
+        })
+    }
+
+}
+
+module.exports.getReviewsController = async (req, res) => {
+
+    try {
+        const review = await getReviewService()
+
+        res.status(200).json({
+            status: 'success',
+            message: 'review is found successfully',
             result: review
         })
     } catch (error) {
