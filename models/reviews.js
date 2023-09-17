@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 // Schema Design
-
 const reviewSchema = mongoose.Schema({
     email: {
         type: String,
