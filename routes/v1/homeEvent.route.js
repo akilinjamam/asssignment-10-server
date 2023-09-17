@@ -4,9 +4,10 @@ const router = express.Router();
 
 
 const homeEventController = require('../../controller/homeEvent.controller');
-const uploader = require('../../middleware/uploader');
 
-router.post('/file-uploades', uploader.single('image'), homeEventController.fileUpload)
+// const uploader = require('../../middleware/uploader');
+
+// router.post('/file-uploades', uploader.single('image'), homeEventController.fileUpload)
 
 router.route('/')
     .post(homeEventController.saveHomeEvent)
