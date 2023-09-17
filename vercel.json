@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "travelbea-server",
+    "name": "asssignment-10-server",
     "builds": [
        { "src": "server.js", "use": "@vercel/node" }
     ],
