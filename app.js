@@ -15,10 +15,6 @@ const userReviewRowter = require('./routes/v1/review.route');
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
-    res.send("route is working now.......")
-});
-
 
 
 // router
@@ -29,6 +25,9 @@ app.use('/api/v1/userCarts', userCartRouter);
 app.use('/api/v1/userControll', userControllerRoute);
 app.use('/api/v1/reviews', userReviewRowter);
 
+app.get("/", (req, res) => {
+    res.send("route is working now.......")
+});
 
 
 module.exports = app;
