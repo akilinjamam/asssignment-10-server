@@ -2,7 +2,7 @@
     "version": 2,
     "name": "asssignment-10-server",
     "builds": [
-       { "src": "server.js", "use": "@vercel/node" }
+       { "src": "node server.js", "use": "@vercel/node" }
     ],
     "routes": [
        { "src": "/(.*)", "dest": "server.js" }
