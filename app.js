@@ -26,7 +26,9 @@ app.use('/api/v1/userControll', userControllerRoute);
 app.use('/api/v1/reviews', userReviewRowter);
 
 app.get("/", (req, res) => {
-    res.send("route is working now.......")
+    res.json({
+        message: "hello travelbea"
+    })
 });
 
 
