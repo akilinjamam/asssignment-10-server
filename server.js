@@ -5,18 +5,15 @@ const colors = require('colors');
 const app = require("./app");
 
 // Database:
-const database = module.exports = async () => {
+const database = module.exports = () => {
     const connectionParams = {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     }
 
-    try {
-        await mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.2gfgxwp.mongodb.net/?retryWrites=true&w=majority`, connectionParams);
-        console.log('Database connected successfully yeah...')
-    } catch (error) {
-        console.log('database connection falied');
-    }
+    mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.2gfgxwp.mongodb.net/?retryWrites=true&w=majority`, connectionParams);
+    console.log('Database connected successfully yeah...')
+
 }
 
 // server
