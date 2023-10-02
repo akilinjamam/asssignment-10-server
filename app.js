@@ -9,6 +9,7 @@ const bannerEventRouter = require('./routes/v1/bannerEvent.router');
 const userCartRouter = require('./routes/v1/userCart.route');
 const userControllerRoute = require('./routes/v1/userControll.route');
 const userReviewRowter = require('./routes/v1/review.route');
+const paymentRowter = require('./routes/v1/payment.router');
 
 
 // middleware
@@ -24,6 +25,7 @@ app.use('/api/v1/bannerEvents', bannerEventRouter);
 app.use('/api/v1/userCarts', userCartRouter);
 app.use('/api/v1/userControll', userControllerRoute);
 app.use('/api/v1/reviews', userReviewRowter);
+app.use('/api/v1/payment', paymentRowter);
 
 app.get("/", (req, res) => {
     res.json({

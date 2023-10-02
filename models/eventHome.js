@@ -9,7 +9,7 @@ const eventSchema = mongoose.Schema({
         trim: true,
         required: [true, 'please provide home event name'],
         maxLength: 40,
-        unique: [true, 'please type in lowercase'],
+        unique: [true, 'please provide unique name'],
     },
     description: { type: String, required: true },
     img: {

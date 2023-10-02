@@ -19,6 +19,8 @@
     "express-validator": "^6.15.0",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.0.3",
+    "sslcommerz-lts": "^1.1.0",
+    "uuid": "^9.0.1",
     "validator": "^13.9.0"
   }
 }
