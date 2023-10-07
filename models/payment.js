@@ -142,6 +142,10 @@ const paymentSchema = mongoose.Schema(
             type: String,
             required: true
         },
+        tourId: {
+            type: String,
+            required: true
+        },
         nameData: [
             {
                 member1: {
