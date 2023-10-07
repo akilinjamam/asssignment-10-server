@@ -48,10 +48,6 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    tourId: {
-        type: String,
-        required: true,
-    },
     paymentStatus: {
         type: String,
         required: true,
