@@ -18,7 +18,7 @@ module.exports.savePaymentController = async (req, res) => {
         }
 
         if (
-            !bodyData.total_amount || !bodyData.currency || !bodyData.cus_name || !bodyData.cus_email || !bodyData.cus_add1 || !bodyData.cus_city || !bodyData.cus_postcode || !bodyData.cus_country || !bodyData.cus_phone
+            !bodyData.total_amount || !bodyData.currency || !bodyData.cus_name || !bodyData.cus_email || !bodyData.cus_add1 || !bodyData.cus_city || !bodyData.cus_postcode || !bodyData.cus_country || !bodyData.cus_phone || !bodyData.tourName || !bodyData.fatherName || !bodyData.motherName || !bodyData.nidNum || !bodyData.genderId || !bodyData.tourType || !bodyData.tourDuration || !bodyData.paymentMethod || !bodyData.member || !bodyData.tourDate || !bodyData.tourId
         ) {
             return res.status(400).json({
                 status: 'failed',

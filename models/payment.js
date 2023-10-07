@@ -105,7 +105,97 @@ const paymentSchema = mongoose.Schema(
         tourName: {
             type: String,
             required: true
-        }
+        },
+        fatherName: {
+            type: String,
+            required: true
+        },
+        motherName: {
+            type: String,
+            required: true
+        },
+        nidNum: {
+            type: String,
+            required: true
+        },
+        genderId: {
+            type: String,
+            required: true
+        },
+        tourType: {
+            type: String,
+            required: true
+        },
+        tourDuration: {
+            type: String,
+            required: true
+        },
+        paymentMethod: {
+            type: String,
+            required: true
+        },
+        member: {
+            type: String,
+            required: true
+        },
+        tourDate: {
+            type: String,
+            required: true
+        },
+        tourId: {
+            type: String,
+            required: true
+        },
+        nameData: [
+            {
+                member1: {
+                    type: String
+                },
+                member2: {
+                    type: String
+                },
+                member3: {
+                    type: String
+                },
+                member4: {
+                    type: String
+                },
+                member5: {
+                    type: String
+                },
+                member6: {
+                    type: String
+                },
+                member7: {
+                    type: String
+                },
+                member8: {
+                    type: String
+                },
+                member9: {
+                    type: String
+                },
+                member10: {
+                    type: String
+                },
+                member11: {
+                    type: String
+                },
+                member12: {
+                    type: String
+                },
+                member13: {
+                    type: String
+                },
+                member14: {
+                    type: String
+                },
+                member15: {
+                    type: String
+                },
+            }
+        ]
+
     },
     {
         timestamps: true,
