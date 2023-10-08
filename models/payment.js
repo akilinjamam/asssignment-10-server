@@ -146,6 +146,10 @@ const paymentSchema = mongoose.Schema(
             type: String,
             required: true
         },
+        orderDate: {
+            type: String,
+            required: true
+        },
         nameData: [
             {
                 member1: {
