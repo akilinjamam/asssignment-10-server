@@ -11,6 +11,8 @@ const userControllerRoute = require('./routes/v1/userControll.route');
 const userReviewRowter = require('./routes/v1/review.route');
 const paymentRowter = require('./routes/v1/payment.router');
 const blogRouterController = require('./routes/v1/blog.router');
+const likeRouterController = require('./routes/v1/like.router');
+const commentRouterController = require('./routes/v1/comment.router');
 
 
 // middleware
@@ -28,6 +30,8 @@ app.use('/api/v1/userControll', userControllerRoute);
 app.use('/api/v1/reviews', userReviewRowter);
 app.use('/api/v1/payment', paymentRowter);
 app.use('/api/v1/blogs', blogRouterController);
+app.use('/api/v1/like', likeRouterController);
+app.use('/api/v1/comment', commentRouterController);
 
 app.get("/", (req, res) => {
     res.json({
