@@ -1,5 +1,5 @@
 const { v4: uuidv4 } = require("uuid");
-const { savePaymentService, getPaymentService } = require("../services/payment.service");
+const { savePaymentService, getPaymentService, updatePaymentService } = require("../services/payment.service");
 const SSLCommerzPayment = require("sslcommerz-lts");
 const Payment = require("../models/payment");
 
@@ -141,6 +141,28 @@ module.exports.getPaymentController = async (req, res) => {
         res.status(400).json({
             status: 'failed',
             message: 'failed to get payment info',
+            error: error.message
+        })
+    }
+}
+
+
+module.exports.updatePaymentController = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const data = req.body;
+        const result = await updatePaymentService(id, data);
+
+        res.status(200).json({
+            status: 'success',
+            message: 'payment info updated successfully',
+            result: result
+        })
+
+    } catch (error) {
+        res.status(400).json({
+            status: 'failed',
+            message: 'failed to update payment info',
             error: error.message
         })
     }

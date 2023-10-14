@@ -102,6 +102,11 @@ const paymentSchema = mongoose.Schema(
             default: false,
             required: true,
         },
+        isFullyPaid: {
+            type: Boolean,
+            default: false,
+            required: true,
+        },
         tourName: {
             type: String,
             required: true

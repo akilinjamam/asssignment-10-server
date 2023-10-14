@@ -14,5 +14,7 @@ router.route('/create-payment')
 router.route('/success')
     .post(paymentController.successPaymentController);
 
+router.route('/:id').patch(paymentController.updatePaymentController)
+
 
 module.exports = router;
