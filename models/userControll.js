@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-
 // Schema Design.
 
 const userControllSchema = mongoose.Schema({
@@ -29,7 +28,32 @@ const userControllSchema = mongoose.Schema({
         enum: ['no', 'yes'],
         dafault: 'no',
         message: 'user newsLetter can not be {VALUE}'
+    },
+    phoneNumber: {
+        type: String,
+        default: 'Add your Phone Number'
+    },
+    dateOfBirth: {
+        type: String,
+        default: 'Add your Birth Date'
+    },
+    nationality: {
+        type: String,
+        default: 'Add your Nation ID'
+    },
+    gender: {
+        type: String,
+        default: 'Type your Gender'
+    },
+    address: {
+        type: String,
+        default: 'Type your Address'
+    },
+    passport: {
+        type: String,
+        default: 'Add your passport ID'
     }
+
 }, {
     timestamps: true,
 });
