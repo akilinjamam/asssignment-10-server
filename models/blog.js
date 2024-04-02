@@ -24,6 +24,10 @@ const blogSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    plainDescription: {
+        type: String,
+        required: true,
+    },
     isApproved: {
         type: Boolean,
         required: true,
