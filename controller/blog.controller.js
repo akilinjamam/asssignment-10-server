@@ -19,7 +19,10 @@ module.exports.createBlogController = async (req, res) => {
 }
 module.exports.getBlogController = async (req, res) => {
     try {
-        const result = await getBlogService()
+
+        const { search } = req.query;
+
+        const result = await getBlogService(search)
 
         res.status(200).json({
             status: 'success',

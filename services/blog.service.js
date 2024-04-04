@@ -5,8 +5,28 @@ module.exports.createBlogService = async (data) => {
     return result;
 }
 
-module.exports.getBlogService = async () => {
-    const result = await Blog.find({})
+module.exports.getBlogService = async (search) => {
+    const searchFromObjects = [
+        'title', 'bloggerName', 'bloggerEmail', 'description'
+    ];
+
+    let condition = [];
+
+    if (search) {
+        condition.push({
+            $or: searchFromObjects.map(items => ({
+                [items]: {
+                    $regex: search,
+                    $options: 'i'
+                }
+            }))
+        })
+    }
+
+
+    const whereCondition = condition?.length > 0 ? { $and: condition } : {};
+
+    const result = await Blog.find(whereCondition)
     return result;
 }
 
