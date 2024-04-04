@@ -7,7 +7,7 @@ module.exports.createBlogService = async (data) => {
 
 module.exports.getBlogService = async (search) => {
     const searchFromObjects = [
-        'title', 'bloggerName', 'bloggerEmail', 'description'
+        'title', 'bloggerName', 'bloggerEmail', 'plainDescription'
     ];
 
     let condition = [];
