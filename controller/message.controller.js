@@ -1,7 +1,7 @@
 const { saveMessageService } = require("../services/message.service")
 const https = require('follow-redirects').https;
-const accountSid = 'ACe19404839e9be1d715c221d5fef1b5d4';
-const authToken = 'c2ea34ffc05c50139dd99f455a00be0b';
+const accountSid = '1234';
+const authToken = '1234';
 // const client = require('twilio')(accountSid, authToken);
 const twilio = require('twilio')
 
