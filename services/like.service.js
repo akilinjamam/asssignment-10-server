@@ -5,7 +5,7 @@ module.exports.createLikeService = async (data) => {
 }
 
 module.exports.getLikeService = async () => {
-    return await Like.find({})
+    return await Like.find({});
 }
 
 module.exports.deleteLikeService = async (id) => {
