@@ -9,7 +9,7 @@ const blogRouterController = require('../routes/v1/blog.router');
 const likeRouterController = require('../routes/v1/like.router');
 const commentRouterController = require('../routes/v1/comment.router');
 const mailRouterController = require('../routes/v1/sendmail.route');
-const messageRouterController = require('../routes/v1/message.router');
+
 
 module.exports.routes = [
     {
@@ -55,9 +55,5 @@ module.exports.routes = [
     {
         path: 'mail',
         variable: mailRouterController
-    },
-    {
-        path: 'message',
-        variable: messageRouterController
     }
 ]
